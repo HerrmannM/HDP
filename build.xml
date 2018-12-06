@@ -1,4 +1,4 @@
-<project name="monashMLHDP" default="mkjar" basedir=".">
+<project name="HDP" default="mkjar" basedir=".">
 	
 	<!-- Properties -->
 	<property name="src" 	location="src"/>
