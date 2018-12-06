@@ -35,6 +35,10 @@ java -Xmx1g -cp "bin:lib/*:lib/commons-math3-3.6.1/*"  monash.ml.hdp.testing.Tes
 ```
 This will run a simple example with a small toy dataset and then learning the probability distribution.
 
+### Dependencies
+* [Apache Common Maths 3 - 3.6.1](https://commons.apache.org/proper/commons-math/)
+* [MLTools](https://github.com/HerrmannM/MLTools)
+
 ### Getting a cross-platform jar
 Simply entering `ant` creates a jar file that you can execute in most environments in dist/HDP.jar.
 
