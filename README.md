@@ -1,4 +1,4 @@
-# MonashMLHDP
+# HDP
 Accurate estimation of conditional categorical probability distributions using Hierarchical Dirichlet Processes 
 
 This package offers an accurate parameter estimation technique for Bayesian Network classifiers. It uses a Hierarchical Dirichlet Process to estimate the parameters (using a collapsed Gibbs sampler). Note that the package is built in a generic way such that it can estimate any conditional probability distributions over categorical variables.
@@ -28,13 +28,20 @@ When using this repository, please cite:
 ```
 
 ## Compiling and launching
-
 After cloning the repo, launch the following commands.
 ```
 ant
 java -Xmx1g -cp "bin:lib/*:lib/commons-math3-3.6.1/*"  monash.ml.hdp.testing.Test2LevelsExampleHeartAttack
 ```
 This will run a simple example with a small toy dataset and then learning the probability distribution.
+
+### Getting a cross-platform jar
+Simply entering `ant` creates a jar file that you can execute in most environments in dist/HDP.jar.
+
+### Memory Consumption
+You may want to allow the JVM to use more memory if you are working with large models.
+Use the `Xmx` flag to increase the JVM memory. For example, `java -Xmx4g`.
+
 
 ## Using it for your own library
 The code available at `src/monash/ml/hdp/testing/Test2LevelsExampleHeartAttack.java`
@@ -58,13 +65,13 @@ System.out.println(hdp.printProbabilities());
 
 ## Contributors
 Original research and code by:
-* [Dr. François Petitjean](https://github.com/fpetitjean)
-* [Dr. Wray Buntime](https://research.monash.edu/en/persons/wray-buntine)
-* [Dr. Geoffrey I. Webb](https://research.monash.edu/en/persons/geoff-webb)
-* [Dr. Nayyar Zaidi](https://github.com/nayyarzaidi)
+* [Dr François Petitjean](https://github.com/fpetitjean)
+* [Pr. Wray Buntime](https://research.monash.edu/en/persons/wray-buntine)
+* [Pr. Geoffrey I. Webb](https://research.monash.edu/en/persons/geoff-webb)
+* [Dr Nayyar Zaidi](https://github.com/nayyarzaidi)
 
-Work on the Stirling Cache:
- * [Dr. Matthieu Herrmann](https://github.com/HerrmannM)
+Work on the Stirling Number Generator:
+ * [Dr Matthieu Herrmann](https://github.com/HerrmannM)
 
 ## Support
 YourKit is supporting this open-source project with its full-featured Java Profiler.
